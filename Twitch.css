@@ -140,6 +140,7 @@ aside{
     height: 100%;
     background-color: #1f1f23;
     position: fixed;
+    margin-right: 100px;
 }
 
 #cabeceraUsers{
@@ -214,7 +215,7 @@ aside li{
 }
 
 #UsuariosDesktop h4{
-    margin: -5px 0 0 15px;
+    margin: -5px 0 0 0px;
 }
 
 #Registro{
@@ -390,6 +391,10 @@ main{
 
 hr{
     color: #2f2f35;
+}
+
+.poto{
+    width: 100%;
 }
 
 @media screen and (min-width:1200px){
