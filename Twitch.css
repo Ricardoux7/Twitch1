@@ -48,7 +48,8 @@ nav{
 }
 
 #Centro input{
-    border: 2px solid #ffffff; 
+    border: 2px solid #ffffff;
+    color: white; 
 }
 
 #Centro{
@@ -63,17 +64,23 @@ nav{
     margin-right: 10px;
 }
 
+.tres{
+    width: 25px;
+    height: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 .icon{
-    width: 70px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
     margin: 20px;
     cursor: pointer;
     align-items: center;
 }
 
 #buscar{
-    width: 70vh;
+    width: 50vh;
     height: 30px;
     background-color: #18181b;
     display: flex;
@@ -97,12 +104,14 @@ nav{
     background-color: rgb(32, 30, 30);
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #boton2{
     background-color: rgb(163, 39, 157);
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 aside{
@@ -144,7 +153,7 @@ aside{
 }
 
 #cabeceraUsers{
-    padding: 10px;
+    padding: 15px;
 }
 
 aside ul{
@@ -152,7 +161,7 @@ aside ul{
     flex-direction: column;
     list-style: none;
     align-items: start;
-    margin: 10px;
+    margin: 5px;
 }
 
 aside ul,li{
@@ -161,8 +170,9 @@ aside ul,li{
 }
 
 aside li{
-    padding: 7px;
-    margin: 3px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
 }
 
 #UsuariosDesktop img, p, .live{
@@ -198,7 +208,7 @@ aside li{
     display: flex;
     position: absolute;
     right: 50px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 #UsuariosDesktop h4{
@@ -208,7 +218,11 @@ aside li{
     font-size: 13px;
     width: 150px;
     padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden; /*HACE QUE NO SE PASE DE LA POSICION*/
+    text-overflow: ellipsis;
 }
+
 
 #UsuariosDesktop h5{
     margin: -5px 0 0 15px;
@@ -256,12 +270,12 @@ main{
     width: 100%;
     min-height: 100vh;
     background-color: #0E0E10;
-    padding: 55px 0px 0 150px;
+    padding: 55px 10px 0 130px;
   }
 
 #primeraParte{
     background-color: #0e0e10;
-    top: 80px;
+    top: 20px;
     height: auto;
     width: 100%;
     min-height: 300px;
@@ -275,8 +289,8 @@ main{
     left: 50%;
     position: absolute;
     transform-origin: 50% 50%;
-    width: 350px;
-    height: 270px;
+    width: 450px;
+    height: 340px;
     cursor: pointer;
 }
 
@@ -337,9 +351,9 @@ main{
     font-weight: bold;
     position: relative;
     background-color: #0e0e10;
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: -40px;
 }
 
 #segundaParte{
@@ -349,21 +363,22 @@ main{
     min-height: 100vh;
     background-color: #0e0e10;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 10px;
+    gap: 15px;
     top: 80px;
     margin-bottom: 0;
-    /*padding-left: 70px;
-    padding-right: 70px;*/
-    /*top: 80px;
-    margin-left: 70px;
     position: relative;
-    margin-top: 80px;*/
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-#segundaParte div{
+.animacion:hover{
+    transition: all 0.1s linear;
+    translate: 10px -10px;
+}
+/*#segundaParte div{
     width: 100%;
     height: 230px;
-}
+}*/
 
 #categorias {
     display: grid;
@@ -393,9 +408,59 @@ hr{
     color: #2f2f35;
 }
 
-.poto{
-    width: 100%;
+.fotodeperfil img{
+    width: 15%;
 }
+
+.TextoInfo h5{
+    color: #adadb8;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+.TextoInfo{
+    margin-left:  0;
+    position: relative;
+}
+
+.titulodirectos, .fotodeperfil{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.etiquetas{
+    padding-top: 7px;
+    justify-content: space-between;
+    
+}
+
+.etiqueta1 {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #29292e;
+    border-radius: 10px 10px 10px 10px;
+    padding-right: 5px;
+    padding-top: 0px;
+    gap: 5px;   
+    width: 90px;
+}
+
+
+.etiqueta1 p{
+    font-size: 15px;
+}
+
+#UsuariosDesktop check-desk:checked ~ aside{
+    transform: translateX(550px);
+}
+
+
 
 @media screen and (min-width:1200px){
     
@@ -441,7 +506,11 @@ hr{
     }
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:850px){
+    #primeraParte div:nth-child(1){
+        width: 400px;
+        height: 300px;
+    }
     #primeraParte div:nth-child(2){
         display: none;
     }
@@ -460,7 +529,7 @@ hr{
 }
 
 
-@media screen and (min-width:750px){
+@media screen and (min-width:850px){
     #iconExplorar{
         display: none;
     }
@@ -471,8 +540,9 @@ hr{
         width: 35%;
     }
     .icon{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
+        margin: 5px;
         align-items: center;
     }
 
@@ -486,5 +556,11 @@ hr{
 
     #Izquierda a{
         display: none;
+    }
+}
+
+@media screen and (max-width:915px){
+    .directos{
+        min-height: 370px;
     }
 }
