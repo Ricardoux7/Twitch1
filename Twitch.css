@@ -130,7 +130,6 @@ aside{
     height: 100%;
     background-color: #1f1f23;
     display: flex;
-    transform: translateX(50px);
 }
 
 #UsuariosMobile img{
@@ -147,7 +146,7 @@ aside{
 }
 
 #menu:checked ~ #UsuariosDesktop{
-    transform: translateX(-250px);
+    transform: translateX(0px);
 }
 
 #UsuariosDesktop{
@@ -213,7 +212,7 @@ aside li{
     border-radius: 50%;
     display: flex;
     position: absolute;
-    right: 50px;
+    right: 55px;
     margin-top: 0px;
 }
 
@@ -230,13 +229,16 @@ aside li{
 
 }
 
-
 #UsuariosDesktop h5{
     margin: -5px 0 0 15px;
 }
 
 #UsuariosDesktop h4{
-    margin: -5px 0 0 0px;
+    margin: 18px 0 0 0px;
+}
+
+#UsuariosDesktop ul, li{
+    padding-top: 20px;
 }
 
 #Registro{
