@@ -129,6 +129,8 @@ aside{
     width: 50px;
     height: 100%;
     background-color: #1f1f23;
+    display: flex;
+    transform: translateX(50px);
 }
 
 #UsuariosMobile img{
@@ -144,12 +146,17 @@ aside{
     cursor: pointer;
 }
 
+#menu:checked ~ #UsuariosDesktop{
+    transform: translateX(-250px);
+}
+
 #UsuariosDesktop{
     width: 250px;
     height: 100%;
     background-color: #1f1f23;
     position: fixed;
     margin-right: 100px;
+    transform: translateX(0);
 }
 
 #cabeceraUsers{
@@ -177,7 +184,6 @@ aside li{
 
 #UsuariosDesktop img, p, .live{
     float: left;
-
     color: white;
     font-weight: bold;
     font-family: 'Arial';
@@ -221,6 +227,7 @@ aside li{
     white-space: nowrap;
     overflow: hidden; /*HACE QUE NO SE PASE DE LA POSICION*/
     text-overflow: ellipsis;
+
 }
 
 
@@ -455,12 +462,6 @@ hr{
 .etiqueta1 p{
     font-size: 15px;
 }
-
-#UsuariosDesktop check-desk:checked ~ aside{
-    transform: translateX(550px);
-}
-
-
 
 @media screen and (min-width:1200px){
     
